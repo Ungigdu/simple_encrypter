@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>简单加解密工具v1</title>
+    <title>简单加解密工具v2</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
@@ -32,6 +32,7 @@
 
     //initialization
     window.secret = window.prompt("你们共同的秘密是？")
+    alert(window.secret)
     document.getElementById("common_secret").setHTML(window.secret)
 
     //encode & decode functions, aes cbc
