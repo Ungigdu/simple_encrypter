@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <p>你们共同的秘密口令:　<span id="common_secret"></span></p>
+    <p>你们共同的秘密口令:　<input id="common_secret" disabled/></p>
     <br>
     <span>原文</span><br>
     <textarea id="plain_text" style="height:200px; width:300px"></textarea>
@@ -32,7 +32,7 @@
 
     //initialization
     window.secret = window.prompt("你们共同的秘密是？")
-    // document.getElementById("common_secret").setHTML(window.secret)
+    document.getElementById("common_secret").value = window.secret
     
 
     //encode & decode functions, aes cbc
