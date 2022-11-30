@@ -74,7 +74,9 @@
     function encrypt() {
         let _secret = window.secret
         let _text = document.getElementById("text_input").value
-        addBlockRight(_text, aes_cbc_encrypt_to_emoji(_text, _secret))
+        let secret = aes_cbc_encrypt_to_emoji(_text, _secret)
+        addBlockRight(_text, secret)
+        navigator.clipboard.writeText(secret);
     }
 
     async function decrypt() {
